@@ -1,7 +1,7 @@
 {
    'name': 'Keen-IT Thema',
    'description': 'Keen thema ontwikkeld door Vroege Oogst',
-   'category': 'Website/Theme',
+   'category': 'Theme',
    'version': '0.0.1',
    'author': 'Yvo Rolefes - Vroege Oogst',
    'license': 'LGPL-3',
@@ -17,4 +17,6 @@
             'website_keen/static/src/scss/keen_navbar.scss',
         ],
    },
+   'application': False,
+   'auto_install': False,
 }
