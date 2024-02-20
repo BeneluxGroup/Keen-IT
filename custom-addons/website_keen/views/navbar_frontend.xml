@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-    <!-- Navbar -->
+    <!-- Navbar Frontend -->
     <template id="web_custom_navbar" name="Keen IT Navbar" inherit_id="website.layout">
         <xpath expr="//header" position="inside">
             <div class="oe_structure">
