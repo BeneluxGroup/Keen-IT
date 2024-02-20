@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Desktop Navbar -->
+    <template id="web_custom_desktop_navbar" name="Custom Desktop Navbar" inherit_id="website.layout">
+        <xpath expr="//header" position="inside">
+            <div class="oe_structure">
+                <!-- Website Logo -->
+                <div class="navbar-logo">
+                    <a t-attf-href="{{ '/' }}">
+                        <img t-if="website.logo" t-att-src="'data:image/png;base64,'+website.logo" alt="Logo"/>
+                    </a>
+                </div>
+
+                <!-- Odoo Main Menu -->
+                <nav class="oe_website_vertical_nav">
+                    <t t-call="website.layout">
+                        <t t-call-assets="website.assets_frontend" />
+                        <div class="navbar-collapse">
+                            <div class="navbar-collapse-inner">
+                                <div class="oe_structure">
+                                    <div class="oe_structure">
+                                        <ul class="oe_structure">
+                                            <li t-attf-class="oe_structure_{{ 'selected' if menu['id'] == current_menu_id else '' }}"
+                                                t-foreach="menu_main.get_main_menu()" t-as="menu" t-key="menu.id">
+                                                <a t-attf-href="{{ '/page/' + menu.url }}">
+                                                    <t t-esc="menu.name"/>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </nav>
+
+                <!-- Search Bar -->
+                <div class="navbar-search">
+                    <form action="/website/search" method="get">
+                        <input type="text" name="search" placeholder="Search..."/>
+                        <button type="submit">Search</button>
+                    </form>
+                </div>
+
+                <!-- Account Button -->
+                <div class="navbar-account">
+                    <a t-if="user_id" t-att-href="'/web#id=' + user_id" class="oe_topbar_name">
+                        <span class="oe_topbar_name" t-esc="user_name"/>
+                    </a>
+                    <a t-if="not user_id" t-att-href="'/web/login?redirect=' + request.httprequest.full_path">
+                        Sign In
+                    </a>
+                </div>
+            </div>
+        </xpath>
+    </template>
+
+    <!-- Mobile Navbar -->
+    <template id="web_custom_mobile_navbar" name="Custom Mobile Navbar" inherit_id="website.layout">
+        <xpath expr="//header" position="inside">
+            <div class="oe_structure">
+                <!-- Mobile Navbar Trigger -->
+                <div class="navbar-mobile-trigger">
+                    <span class="oe_structure"></span>
+                    <span class="oe_structure"></span>
+                    <span class="oe_structure"></span>
+                </div>
+
+                <!-- Website Logo -->
+                <div class="navbar-logo">
+                    <a t-attf-href="{{ '/' }}">
+                        <img t-if="website.logo" t-att-src="'data:image/png;base64,'+website.logo" alt="Logo"/>
+                    </a>
+                </div>
+
+                <!-- Odoo Main Menu (Mobile) -->
+                <nav class="oe_website_vertical_nav">
+                    <t t-call="website.layout">
+                        <t t-call-assets="website.assets_frontend" />
+                        <div class="navbar-collapse">
+                            <div class="navbar-collapse-inner">
+                                <div class="oe_structure">
+                                    <div class="oe_structure">
+                                        <ul class="oe_structure">
+                                            <li t-attf-class="oe_structure_{{ 'selected' if menu['id'] == current_menu_id else '' }}"
+                                                t-foreach="menu_main.get_main_menu()" t-as="menu" t-key="menu.id">
+                                                <a t-attf-href="{{ '/page/' + menu.url }}">
+                                                    <t t-esc="menu.name"/>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </nav>
+
+                <!-- Search Bar (Mobile) -->
+                <div class="navbar-search">
+                    <form action="/website/search" method="get">
+                        <input type="text" name="search" placeholder="Search..."/>
+                        <button type="submit">Search</button>
+                    </form>
+                </div>
+
+                <!-- Account Button (Mobile) -->
+                <div class="navbar-account">
+                    <a t-if="user_id" t-att-href="'/web#id=' + user_id" class="oe_topbar_name">
+                        <span class="oe_topbar_name" t-esc="user_name"/>
+                    </a>
+                    <a t-if="not user_id" t-att-href="'/web/login?redirect=' + request.httprequest.full_path">
+                        Sign In
+                    </a>
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo>
