@@ -7,7 +7,7 @@
    'license': 'LGPL-3',
    'depends': ['website'],
    'data': [
-       'views/navbar_frontend.xml',
+       #'views/navbar_frontend.xml',
    ],
    'assets': {
         'web.assets_frontend': [
