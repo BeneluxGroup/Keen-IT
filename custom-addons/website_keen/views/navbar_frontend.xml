@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <!-- Navbar Frontend -->
-    <template id="keen-header" name="Keen IT Header">
-        <header>
-            TestHeader123
-        </header>
+    <template id="keen-header" inherit_id="website.layout" name="Keen IT Header">
+        <xpath expr="//header" position="replace">
+            <header>
+                Testheader hatsa
+            </header>
+        </xpath>
     </template>
 </odoo>
