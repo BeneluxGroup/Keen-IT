@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <!-- Navbar Frontend -->
-    <template id="web_custom_navbar" name="Keen IT Navbar" inherit_id="website.layout">
-        <xpath expr="//header" position="inside">
-            <div class="oe_structure">
-                <!-- Website Logo -->
-                <div class="navbar-logo">
-                    <a t-attf-href="{{ '/' }}">
-                        <img t-if="website.logo" t-att-src="'data:image/png;base64'" alt="Logo"/>
-                    </a>
-                </div>
-            </div>
-        </xpath>
+    <template id="keen-header" name="Keen IT Header">
+        <header>
+            TestHeader
+        </header>
     </template>
 </odoo>
