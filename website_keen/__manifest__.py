@@ -1,10 +1,9 @@
 {
-   'name': 'Keen Thema',
+   'name': 'Keen-IT Thema',
    'description': 'Keen thema ontwikkeld door Vroege Oogst',
    'category': 'Website/Theme',
    'version': '17.0.0',
    'author': 'Yvo Rolefes - Vroege Oogst',
-   'license': '...',
    'depends': ['website'],
    'assets': {
         'web.assets_frontend': [
