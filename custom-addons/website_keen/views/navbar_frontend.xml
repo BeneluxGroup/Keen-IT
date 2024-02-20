@@ -7,7 +7,7 @@
                 <!-- Website Logo -->
                 <div class="navbar-logo">
                     <a t-attf-href="{{ '/' }}">
-                        <img t-if="website.logo" t-att-src="'data:image/png;base64,'+website.logo" alt="Logo"/>
+                        <img t-if="website.logo" t-att-src="'data:image/png;base64'" alt="Logo"/>
                     </a>
                 </div>
             </div>
