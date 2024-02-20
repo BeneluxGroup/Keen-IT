@@ -3,7 +3,7 @@
     <!-- Navbar Frontend -->
     <template id="keen-header" name="Keen IT Header">
         <header>
-            TestHeader
+            TestHeader123
         </header>
     </template>
 </odoo>
