@@ -4,6 +4,7 @@
    'category': 'Website/Theme',
    'version': '17.0.0',
    'author': 'Yvo Rolefes - Vroege Oogst',
+   'license': 'LGPL-3',
    'depends': ['website'],
    'assets': {
         'web.assets_frontend': [
