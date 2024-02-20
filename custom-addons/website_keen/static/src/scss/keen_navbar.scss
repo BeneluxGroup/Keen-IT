@@ -1,0 +1,14 @@
+.keen-navbar {
+    &-desktop {
+        img {
+            height: 150px;
+            width: auto;
+        }
+    }
+    &-mobile {
+        img {
+            height: 50px;
+            width: auto;
+        }
+    }
+}

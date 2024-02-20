@@ -4,7 +4,16 @@
     <template id="keen-header" inherit_id="website.layout" name="Keen IT Header">
         <xpath expr="//header" position="replace">
             <header>
-                Testheader hatsa
+                <nav>
+                <!-- Nav Desktop -->
+                    <div class="keen-navbar-desktop">
+                        <div class="keen-navbar-logo">
+                            <a href="/">
+                                <img class="img-fit" src="/website_keen/static/src/img/base/keen-rgb.svg" alt="Keen IT Logo"/>
+                            </a>
+                        </div>
+                    </div>
+                </nav>
             </header>
         </xpath>
     </template>
