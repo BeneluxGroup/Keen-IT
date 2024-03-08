@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Navbar Frontend -->
+    <template id="keen-header" inherit_id="website.layout" name="Keen IT Header">
+        <xpath expr="//header" position="replace">
+            <header>
+                <nav class="container-fluid">
+                <!-- Nav Desktop -->
+                    <div class="keen-navbar-desktop">
+                        <div class="keen-navbar-logo">
+                            <a href="/">
+                                <img class="img-fit" src="/website_keen/static/src/img/base/keen-rgb.svg" alt="Keen IT Logo"/>
+                            </a>
+                        </div>
+                        <div class="keen-navbar-menu-desktop">
+                            <!-- Get menu's from odoo main menu -->
+                            <ul>
+                                <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                                    <t t-call="website.submenu">
+                                        <t t-set="submenu" t-value="submenu"/>
+                                            <t t-set="item_class" t-valuef="nav-item"/>
+                                            <t t-set="link_class" t-valuef="nav-link"/>
+                                        </t>
+                                    </t>
+                                </t>
+                            </ul>
+                            <!-- Sign In -->
+                            <div class="keen-navbar-account">
+                                <a t-if="not user_id" t-att-href="'/web/login?redirect=' + request.httprequest.full_path">
+                                    Sign In
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+        </xpath>
+    </template>
+</odoo>
