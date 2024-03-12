@@ -1,0 +1,39 @@
+.keen-footer {
+
+    img {
+        max-width:100%;
+    }
+    background: #004879;
+    color: white;
+    ul {
+        list-style: none;
+        li {
+            padding-top: .4rem;
+            padding-bottom: .4rem;
+        }
+    }
+    a {
+                color: white;
+                transition: color 150ms ease-in-out;
+                &:hover {
+                    color: #F6AA59;
+                    text-decoration: none;
+                }
+            }
+    .partner-col img { padding: 16px; }
+    .copy-footer-spacing {
+        &:after {
+            content: "|";
+            margin: 0 2ch 0 2ch;
+        }
+        &:last-of-type:after {
+            content: "";
+            margin: 0 0 0 2ch;
+        }
+    }
+
+}
+
+.keen-header {
+    background: white;
+}

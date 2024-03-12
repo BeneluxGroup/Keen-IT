@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="keen-footer" inherit_id="website.layout" name="Keen IT Footer">
+        <xpath expr="//footer" position="replace">
+
+        </xpath>
+    </template>
+</odoo>

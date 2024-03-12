@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="header" model="ir.ui.view">
+       <field name="name">Keen Header</field>
+       <field name="type">qweb</field>
+       <field name="key">website_keen.header</field>
+       <field name="inherit_id" ref="website.layout"/>
+       <field name="mode">extension</field>
+       <field name="arch" type="xml">
+          <xpath expr="//header//nav" position="replace">
+             <header class="keen-header">
+                    <nav class="container">
+                    <!-- Nav Desktop -->
+                        <div class="keen-navbar-desktop row align-items-center justify-content-between">
+                            <div class="col-auto keen-navbar-logo">
+                                <a href="/">
+                                    <img class="img-fit" src="/website_keen/static/src/img/base/keen-rgb.svg" alt="Keen IT Logo"/>
+                                </a>
+                            </div>
+                            <div class="col-auto d-flex flex-row align-items-center justify-content-center keen-navbar-menu d-flex">
+                                <ul class="d-flex flex-row list-unstyled justify-stretch">
+                                   <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                                       <t t-call="website.submenu">
+                                           <t t-set="item_class" t-valuef="nav-item"/>
+                                           <t t-set="link_class" t-valuef="nav-link"/>
+                                       </t>
+                                   </t>
+                                    <t t-call="portal.placeholder_user_sign_in">
+                                       <t t-set="_item_class" t-valuef="nav-item"/>
+                                       <t t-set="_link_class" t-valuef="nav-link"/>
+                                    </t>
+                                    <t t-call="portal.user_dropdown">
+                                       <t t-set="_user_name" t-value="true"/>
+                                       <t t-set="_icon" t-value="false"/>
+                                       <t t-set="_avatar" t-value="false"/>
+                                       <t t-set="_item_class" t-valuef="nav-item dropdown"/>
+                                       <t t-set="_link_class" t-valuef="nav-link"/>
+                                       <t t-set="_dropdown_menu_class" t-valuef="..."/>
+                                    </t>
+                                </ul>
+                            </div>
+                            <div class="col-auto">
+
+                            </div>
+                        </div>
+                    </nav>
+                </header>
+          </xpath>
+       </field>
+    </record>
+
+    <record id="footer" model="ir.ui.view">
+        <field name="name">Keen Footer</field>
+        <field name="type">qweb</field>
+        <field name="key">website_keen.footer</field>
+        <field name="inherit_id" ref="website.layout"/>
+        <field name="mode">extension</field>
+        <field name="arch" type="xml">
+                <xpath expr="//footer" position="replace">
+                   <footer class="keen-footer py-5">
+                        <div class="container">
+                            <div class="row">
+                                <div id="footer-logo" class="col-auto col-xl-2">
+                                    <a href="/">
+                                        <img alt="Keen IT Solutions logo" class="img-fit" src="/website_keen/static/src/img/base/keen-rgb-footer.svg"/>
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <ul class="keen-footer-list">
+                                        <li>Oplossingen</li>
+                                        <li>Document Management</li>
+                                        <li>Output Management</li>
+                                        <li>Cloud Solutions</li>
+                                        <li>Trainingen</li>
+                                    </ul>
+                                </div>
+                                <div class="col">
+                                    <ul class="keen-footer-list">
+                                        <li><a href="/cases/">Cases</a></li>
+                                        <li><a href="/over-ons/">Over ons</a></li>
+                                        <li><a href="/contact/">Contact</a></li>
+                                        <li>Account</li>
+                                        <li>Support</li>
+                                    </ul>
+                                </div>
+                                <div class="col">
+                                    <ul class="keen-footer-list">
+                                        <li>Kantoor Almelo<br/>Twentepoort Oost 61-04<br/>7609 RG Almelo</li>
+                                        <li>Kantoor Deventer<br/>Maagdenburgstraat 14<br/>7421 ZC Deventer</li>
+                                        <li><a href="">+31 850 513 000</a><br/><a href="mailto:info@keen-it.nl">info@keen-it.nl</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col partner-col">
+                                    <img alt="M-Files logo" src="/website_keen/static/src/img/base/MFiles.png"/>
+                                    <img alt="Microsoft logo" src="/website_keen/static/src/img/base/Microsoft.png" />
+                                    <img alt="Validsign logo" src="/website_keen/static/src/img/base/Validsign.png" />
+                                    <img alt="Bottomline logo" src="/website_keen/static/src/img/base/Bottomline.png" />
+                                </div>
+                            </div>
+                            <div class="row justify-content-end align-items-end">
+                                <div class="col-auto me-lg-5 py-5">
+                                    <p class="copy-footer-spacing d-inline">© 2024</p>
+                                    <p class="copy-footer-spacing d-inline">Keen IT Consultants</p>
+                                    <p class="copy-footer-spacing d-inline"><a href="/algemene-voorwaarden/">Algemene Voorwaarden</a></p>
+                                    <p class="copy-footer-spacing d-inline"><a href="privacy">Privacy</a></p>
+                                    <p class="copy-footer-spacing d-inline">Realisatie: <a href="https://vroeogeoogst.nl/?ref=keen" target="_blank">Vroege Oogst</a></p>
+                                    <a class="mx-3" target="_blank" href="https://linkedin.com/"><i class="fa-lg fab fa-linkedin"></i></a>
+                                    <a class="mx-3" target="_blank" href="https://facebook.com/"><i class="fa-lg fab fa-facebook"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                    <script src="https://kit.fontawesome.com/9530d9af3a.js" crossorigin="anonymous"></script>
+                </xpath>
+        </field>
+    </record>
+</odoo>

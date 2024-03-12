@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="template_header_opt" inherit_id="website.snippet_options" name="Header Template - Keen">
+       <xpath expr="//we-select[@data-variable='header-template']" position="inside">
+          <we-button title="Keen"
+             data-customize-website-views="website_keen.header"
+             data-customize-website-variable="'Keen'" data-img="/website_keen/static/src/img/base/keen-rgb.svg" />
+       </xpath>
+    </template>
+
+    <template id="template_footer_opt" inherit_id="website.snippet_options" name="Footer Template - Keen">
+       <xpath expr="//we-select[@data-variable='footer-template']" position="inside">
+          <we-button title="keen"
+             data-customize-website-views="website_keen.footer"
+             data-customize-website-variable="'Keen'" data-img="/website_keen/static/src/img/base/keen-rgb.svg" />
+       </xpath>
+    </template>
+</odoo>
